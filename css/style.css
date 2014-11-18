@@ -8,6 +8,10 @@ body{
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
 }
+a{
+    border:none;
+    outline: 0 none !important;
+}
 h1,h2,h3,h4,h5{
     font-family: 'Roboto', sans-serif;
     text-align: center;
@@ -27,29 +31,30 @@ h1,h2,h3,h4,h5{
     font-family: 'Fugaz One', cursive;
     font-size: 20px;
     margin:0px;
-    padding: 40px 60px;
+    padding: 40px 50px;
 }
 .logo h1 a{
     color:#3e75ab;
     text-decoration: none;
 }
-.social-media{
+.nav{
     position: absolute;
     top: 0px;
     right: 0px;
+    display: none;
 }
-.social-media h2 {
+.nav h2 {
     font-size: 14px;
     margin: 55px 40px;
 }
-.social-media h2 a{
+.nav h2 a{
     color: #555;
     text-decoration: none;
     text-transform: uppercase;
     padding: 0px 6px;
     font-weight: 500;
 }
-.social-media h2 a:hover{
+.nav h2 a:hover{
     color:#3e75ab;
 }
 .search-section{
@@ -58,11 +63,12 @@ h1,h2,h3,h4,h5{
     background-size: 100%;
     background-position: center bottom;
     text-align: center;
-    padding: 150px 0px 400px;
+    padding: 50px 0px 300px;
 }
 .search-section h1{
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 300;
+    font-size: 1.6em;
     color:#555;
     padding: 14px;
 }
@@ -91,7 +97,8 @@ h1,h2,h3,h4,h5{
 } 
 .content-wrapper h2{
     color:#555;
-    font-weight: 100;
+    font-weight: 300;
+    font-size: 1.5em;
     padding: 30px;
 }
 .common-queries ul{
@@ -99,7 +106,7 @@ h1,h2,h3,h4,h5{
 }
 .common-queries ul li{
     list-style: none;
-    text-align: center;
+    text-align: left;
     padding: 3px;
 }
 .common-queries ul li a{
@@ -134,6 +141,7 @@ h1,h2,h3,h4,h5{
 footer .footer-wrapper{
     width:100%;
     padding: 35px;
+    margin-bottom: 100px;
     font-weight: 300;
     text-align: center;
     background:#eee;
@@ -142,6 +150,33 @@ footer .footer-wrapper{
 footer .footer-wrapper a{
     color:#666;
     text-decoration: underline;
-    padding: 10px 10px 0px;
+    padding: 10px 4px 0px;
+    font-size: 0.7em;
+}
 
+@media (min-width: 720px) { 
+    .search-section{
+        padding: 150px 0px 400px;
+    }
+    .logo h1{
+        padding: 40px 60px;
+    }
+    .nav{
+        display: block;
+    }
+    .search-section h1{
+        font-size: 2em;
+        font-weight: 100;
+    }
+    .content-wrapper h2{
+        font-weight: 100;
+        font-size: 2em;
+    }
+    .common-queries ul li{
+        text-align: center;
+    }
+    footer .footer-wrapper a{
+        font-size: 1.0em;
+        padding: 10px 10px 0px;
+    }
 }
