@@ -3,7 +3,6 @@
 body{
     color:#444;
     background: url('../images/bg-c.jpg') no-repeat top right;
-    background-size: 100%;
     background-color: #000;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
@@ -59,7 +58,7 @@ h1,h2,h3,h4,h5{
 }
 .search-section{
     background: url('../images/search-bg-a.jpg') no-repeat;
-    background-color: #ddd;
+    background-color: #dedde2;
     background-size: 100%;
     background-position: center bottom;
     text-align: center;
@@ -68,7 +67,7 @@ h1,h2,h3,h4,h5{
 .search-section h1{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 1.6em;
+    font-size: 1.3em;
     color:#555;
     padding: 14px;
 }
@@ -98,8 +97,8 @@ h1,h2,h3,h4,h5{
 .content-wrapper h2{
     color:#555;
     font-weight: 300;
-    font-size: 1.5em;
-    padding: 30px;
+    font-size: 1.3em;
+    padding: 10px;
 }
 .common-queries ul{
     padding: 0px;
@@ -112,7 +111,7 @@ h1,h2,h3,h4,h5{
 .common-queries ul li a{
     color:#666;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.0em;
     font-weight: 300;
 }
 .common-queries ul li a i{
@@ -132,7 +131,7 @@ h1,h2,h3,h4,h5{
 .about p{
     font-weight: 300;
     font-size: 1.0em;
-    line-height: 1.5em;
+    line-height: 1.2em;
 }
 .about p .itl{
     font-style: italic;
@@ -171,6 +170,7 @@ footer .footer-wrapper a{
     .content-wrapper h2{
         font-weight: 100;
         font-size: 2em;
+        padding: 30px;
     }
     .common-queries ul li{
         text-align: center;
