@@ -13,10 +13,7 @@ var query = '';
 var start = 0;
 $('#search-form').submit(function(e) {
     e.preventDefault();
-    $('.search-section').fadeOut('normal', function() {
-        $(this).hide();
-    });
-    $('.content-wrapper').css('padding', '150px 0px 400px');
+
     $('.common-queries').hide();
     $('.about').hide();
     query = $('#search-field').val();
@@ -56,6 +53,7 @@ function solrSearch() {
         jsonp: 'json.wrf',
         success: function (data, textStatus, jqXHR) {
             renderSearchResults(data.response);
+            console.log(data.response);
         }
     });
 }
