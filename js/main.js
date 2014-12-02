@@ -45,7 +45,7 @@ function solrSearch() {
             'wt': 'json',
             'indent': false,
             'fl': 'url,title',
-            'score': 'score desc',
+            'score': 'score asc',
 			'rows': '10',
 			'start': start
         },
