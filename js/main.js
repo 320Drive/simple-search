@@ -23,7 +23,12 @@ $('#search-form').submit(function(e) {
     query = parseQuery();
     solrSearch();
     $('.search-results').show();
+	$('.search-results .container').on('click', '#prev-page', function() {
+		start = start - 10;
+		solrSearch();
+	});
 	$('.search-results .container').on('click', '#next-page', function() {
+		start = start + 10;
 		solrSearch();
 	});
 });
@@ -34,18 +39,17 @@ function parseQuery() {
 }
 
 function solrSearch() {
-	start = start || 0;
     $.ajax({
         async: false,
         type: 'GET',
         url: 'http://128.208.102.114:8080/select',
         dataType: 'JSONP',
         data: {
-            'q': 'content:' + query,
+            'q': 'title:' + query,
             'wt': 'json',
             'indent': false,
             'fl': 'url,title',
-            'score': 'score asc',
+            'score': 'score desc',
 			'rows': '10',
 			'start': start
         },
@@ -58,13 +62,19 @@ function solrSearch() {
 
 function renderSearchResults(searchResults) {
 	$('.search-results .container').empty();
-	start = searchResults.start + 10;
     for (var i = 0; i < searchResults.docs.length; i++) {
         var title = searchResults.docs[i].title;
         var url = searchResults.docs[i].url;
         var resultItem = $('<a>', {href: url, text: title});
         $('.search-results .container').append(resultItem).append('<br />');
     }
+	$('.search-results .container').append('<br />');
+	var prevLink = $('<a>', {href: '#', text: 'Prev page', id: 'prev-page'});
 	var nextLink = $('<a>', {href: '#', text: 'Next page', id: 'next-page'});
-	$('.search-results .container').append(nextLink);
+	if (start > 0) {
+		$('.search-results .container').append(prevLink);
+	}
+	if ((start + 10) < searchResults.numFound) {
+		$('.search-results .container').append(nextLink);
+	}
 }
