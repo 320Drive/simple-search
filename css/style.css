@@ -84,6 +84,7 @@ h1,h2,h3,h4,h5{
     border-bottom-left-radius: 5px;
 }
 .search-section .search-button{
+    outline: none 0;
     background: #fff;
     color:#666;
     border-top-right-radius: 5px !important;
@@ -142,6 +143,17 @@ h1,h2,h3,h4,h5{
     font-style: italic;
     font-weight: 400;
 }
+
+.no-results{
+    font-weight: 300;
+}
+.no-results ul{
+    list-style: none;
+    line-height: 2em;
+    text-align: center;
+    padding: 0px;
+}
+
 
 footer .footer-wrapper{
     width:100%;
