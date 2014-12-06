@@ -232,6 +232,7 @@ footer .footer-wrapper a{
 .articles figure h2 {
     word-spacing: -0.15em;
     font-weight: 300;
+    text-align: right;
 }
 
 .articles figure h2 span {
