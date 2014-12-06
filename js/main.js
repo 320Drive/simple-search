@@ -40,6 +40,12 @@ angular.module('driveApp', [])
 
         $scope.searchQuery = function(query){
             $scope.searchInput=query;
+
+            $.smoothScroll({
+                scrollTarget: '.wrapper',
+                offset: 10
+            });
+
         }
 
 
@@ -60,6 +66,7 @@ $('#search-form').submit(function(e) {
 
     $('.common-queries').hide();
     $('.about').hide();
+    $('.articles').hide();
     query = $('#search-field').val();
     query = parseQuery();
 
