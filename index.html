@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="driveApp">
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 
 </head>
 
-<body data-0="background-size:100%;" data-10-end="background-size:130%;">
+<body data-0="background-size:100%;" data-10-end="background-size:130%;" ng-controller="display">
 
     <div class="container" id="skrollr-body">
         <div class="wrapper">
@@ -44,7 +44,7 @@
                     <form class="form-inline" role="form" data-0="top:0px;" data-50-end="top:55px;" id="search-form">
                         <h1>Best search for car tips</h1>
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control search-field" id="search-field" placeholder="Search" name="q">
+                            <input type="text" ng-model="searchInput" class="form-control search-field" id="search-field" placeholder="Search" name="q">
                             <div class="input-group-btn">
                                 <button class="btn btn-default btn-lg search-button" id="search-button" type="submit"><i class="fa fa-search"></i>
                                 </button>
@@ -91,35 +91,13 @@
                     </div>
                 </section>
 
-                <section class="common-queries">
+                <section class="common-queries" >
                     <div class="row">
 
                         <div class="col-xs-offset-1 col-xs-10">
                             <h2>Most commonly searched queries:</h2>
                             <ul class="query-links">
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> car oil change</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> filter change</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> maintenance</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> car noise</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> reduce noise</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> used cars</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> BMW 4 series</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> safe driving</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> reduce smoke</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> used tires</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> honda accord</a>
-                                </li>
-                                <li class="col-xs-6 col-md-3"><a href="#"><i class="fa fa-caret-right"></i> electic cars</a>
+                                <li class="col-xs-6 col-md-3" ng-repeat="item in queries"><a ng-click="searchQuery(item.query)"><i class="fa fa-caret-right"></i>{{item.query}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -201,6 +179,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
     <script src="js/lib/jquery.smooth-scroll.js"></script>
     <script src="js/lib/skrollr.min.js"></script>
     <script src="js/main.js"></script>
