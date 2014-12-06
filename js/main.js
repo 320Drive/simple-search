@@ -1,11 +1,12 @@
 skrollr.init(
 	{
 		smoothScrolling:true,
-		smoothScrollingDuration:1000,
-		render: function(data) {
-	        //Log the current scroll position.
-	        //console.log(data.curTop);
-	    }
+		smoothScrollingDuration:2000,
+        scale:1
+		// render: function(data) {
+	 //        Log the current scroll position.
+	 //        console.log(data.curTop);
+	 //    }
 	}
 );
 
@@ -13,6 +14,11 @@ var query = '';
 var start = 0;
 $('#search-form').submit(function(e) {
     e.preventDefault();
+
+    $.smoothScroll({
+      scrollTarget: '.content-wrapper',
+      offset: -100
+    });
 
     $('.common-queries').hide();
     $('.about').hide();
