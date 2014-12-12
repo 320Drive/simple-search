@@ -127,8 +127,9 @@ function renderSearchResults(searchResults) {
             href: url,
             target: '_blank',
             class: 'list-group-item',
-            text: title
+            text: url
         });
+        resultItem.prepend($('<h4>',{text:title}));
         $('.search-results .list-group').append(resultItem);
     }
     $('.search-results').append('<br />');

@@ -104,6 +104,17 @@ h1,h2,h3,h4,h5{
 .search-result {
     display: none;
 }
+a.list-group-item {
+    padding: 22px;
+    border-left: none;
+    border-right: none;
+}
+a.list-group-item h4{
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: left;
+    margin:0px;
+}
 .common-queries ul{
     padding: 0px;
 }
