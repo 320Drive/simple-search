@@ -41,7 +41,7 @@
             <section class="search-section">
                 <div class="col-xs-12">
 
-                    <form class="form-inline" role="form" data-0="top:0px;" data-50-end="top:55px;" id="search-form">
+                    <form ng-submit="searchSubmit=true" class="form-inline" role="form" data-0="top:0px;" data-50-end="top:55px;" id="search-form">
                         <h1>Best search for car tips</h1>
                         <div class="input-group input-group-lg">
                             <input type="text" ng-model="searchInput" class="form-control search-field" id="search-field" placeholder="Search" name="q">
@@ -69,7 +69,15 @@
 
                                 </div>
                                 <!-- Results are loaded here... -->
+                                
                             </div>
+                            <nav class="pagination-ctrl" ng-show="searchSubmit">
+                                <ul class="pagination">
+                                    <!-- <li id="prev-page"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+                                    <li class="page-numbers"><a href="#">1</a></li>
+                                    <li id="next-page"><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li> -->
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                     <div class="row no-results">

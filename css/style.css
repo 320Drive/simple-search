@@ -8,7 +8,6 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 a{
-    border:none;
     outline: 0 none !important;
 }
 h1,h2,h3,h4,h5{
@@ -114,6 +113,12 @@ a.list-group-item h4{
     font-weight: 500;
     text-align: left;
     margin:0px;
+}
+.pagination-ctrl{
+    text-align: center;
+}
+.pagination li a{
+    border-color:#ccc;
 }
 .common-queries ul{
     padding: 0px;
