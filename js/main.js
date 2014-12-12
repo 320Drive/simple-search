@@ -1,12 +1,19 @@
-skrollr.init({
-    smoothScrolling: true,
-    smoothScrollingDuration: 2000,
-    scale: 1
-        // render: function(data) {
-        //        Log the current scroll position.
-        //        console.log(data.curTop);
-        //    }
-});
+
+if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+    skrollr.init({
+        forceHeight: false
+    });
+}else{
+    skrollr.init({
+        smoothScrolling: true,
+        smoothScrollingDuration: 2000,
+        scale: 1
+            // render: function(data) {
+            //        Log the current scroll position.
+            //        console.log(data.curTop);
+            //    }
+    });
+}
 
 var resultsJSON;
 
