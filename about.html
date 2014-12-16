@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="driveApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="car repair, car servicing, DIY car, car help, driving tips, driving advice, repair, maintenance, servicing, do it yourself, fix it yourself, car fix, self-servicing">
+    <meta name="author" content="Caleb Thorsteinson, Shijir Tsogoo, Ramin Nehchiri, Stan Hu, Danny Lee">
+    <title>Drive</title>
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Link to your style sheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+
+<body data-0="background-size:100%;" data-100-end="background-size:105%;" ng-controller="display">
+
+    <div class="container" id="skrollr-body">
+        <div class="wrapper">
+
+            <section class="logo">
+                <h1>
+              <a href="index.html">
+                DRIVE
+              </a>
+            </h1>
+            </section>
+
+            <section class="nav">
+                <h2>
+              <a href="#">Advertising</a>
+              <a href="#">Business</a>
+              <a href="about.html">About</a>  
+            </h2>
+            </section>
+
+            <section class="search-section">
+                <div class="col-xs-12">
+
+                    <form ng-submit="searchSubmit=true" class="form-inline" role="form" data-0="top:0px;" data-50-end="top:55px;" id="search-form">
+                        <h1>Best search for car tips</h1>
+                        <div class="input-group input-group-lg">
+                            <input type="text" ng-model="searchInput" class="form-control search-field" id="search-field" placeholder="Search" name="q">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default btn-lg search-button" id="search-button" type="submit"><i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h5>
+                  Ex: change filter, change oil, etc...
+                </h5>
+
+                    </form>
+
+                </div>
+            </section>
+
+            <div class="content-wrapper">
+
+               <div class="row">
+                   <div class="col-xs-offset-1 col-xs-10">
+                        <h3>About Drive</h3>
+                        <h4>
+                            <p><a href="http://youtu.be/JaGyvqQ9n-4" target="_blank"> Watch Presentation</a></p>
+                            <p><a href="interim.pdf" target="_blank">Interim Results</a></p>
+                            <p><a href="technical.pdf" target="_blank">Technical Plans</a></p>
+                        </h4>
+                        <h4>Marketing Plan</h4>
+
+                        <p>
+                            Our search service’s goal is provide users with the most relevant car information based on what they need—ranging from servicing and repairing your own car to advice on how to drive under certain conditions like snow and rain.
+                        </p>
+                        <p>
+                        Our marketing goals are to attain and maintain a large user base and hopefully catch the eye of some auto parts shops like o’reilly or autozone. Surpass car talk in query results
+                        </p>
+                        <p>
+                            Our users will be people who aren’t car savvy that own older cars from ages between 16 and up—namely, High school students and community college students (since they can’t live on campus, they have to drive to school on a daily basis)
+                        </p>
+                        <p>
+                           Our competition would be cartalk.com, and Edmunds.com. They both deal with car information and give advice and car tips and tricks. Cartalk offers car servicing advice as well as advice on how to drive in the winter and the summer.  Edmunds offers pricing along with a little bit of car tips and resources. We will be focused more on delivering DIY maintenance, servicing and repair, as well as driving tips -- which Cartalk does. However, we believe we can outdo them in UI/UX design and just having better overall user experience. 
+                        </p>
+
+                        <p>
+                            Danny - the team spokesperson in charge of coordination, facilitation, marketing and needs assessment.
+                        </p>
+                        <p>
+                            Ramin – will work on both back-end and front-end sides of our website.
+
+                        </p>
+                        <p>
+                            Shijir - will work as a front-end developer.  As a front-end developer, I design and develop the overall UI/UX.
+                        </p>
+                        <p>
+                            Stan - the back end developer. My job is to build the core functionality of our search engine, making sure it’ll fulfill the needs of our users more than our competitors.
+                        </p>
+    
+
+                   </div>
+               </div>
+
+            </div>
+
+            <footer>
+                <div class="footer-wrapper">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Copyright © 2014 - TEAM DRIVE</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <a href="#">Privacy Policy</a>
+                            <a href="about.html">About</a>
+                            <a href="#">Advertise</a>
+                            <a href="#">Business</a>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+    <script src="js/lib/jquery.smooth-scroll.js"></script>
+    <script src="js/lib/skrollr.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-56985508-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
